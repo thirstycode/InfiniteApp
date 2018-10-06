@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Infinite</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='menu/images/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='menu/vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='menu/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='menu/vendor/animate/animate.css')}}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='menu/vendor/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='menu/vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='menu/css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='menu/css/main.css')}}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="{{url_for('static',filename='menu/images/img-01.png')}}" alt="IMG">
+				</div>
+						<span class="login100-form-title">
+							 Logged in as user : <a href="https://www.codechef.com/users/{{username}} " target="_blank">{{username}}</a>
+							 <center><a href="/logout">Logout</a></center>
+						</span>
+					<pr>
+					<pr>
+				<form action="/progressapp">
+					<i class="fa fa-circle fa-sm" aria-hidden="true"></i>  Track your codechef progress and compare with your friends to have a competition. 😎<br>
+						<div class="container-login100-form-btn">
+							<button class="login100-form-btn">	
+								<a href="/progressapp">Progress Tracker Dashboard</a>
+							</button>
+						</div><br>
+				</form><pr>
+				<form action="/problemfinder">
+					<i class="fa fa-circle fa-sm" aria-hidden="true"></i>  Practice problems to defeat your friends in next competition. 😛 💪<br>
+						<div class="container-login100-form-btn">
+							<button class="login100-form-btn">	
+								<a href="/problemfinder">Problem Finder</a>
+							</button>
+						</div>
+				</form><pr>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="{{url_for('static',filename='menu/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static',filename='menu/vendor/bootstrap/js/popper.js')}}"></script>
+	<script src="{{url_for('static',filename='menu/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static',filename='menu/vendor/select2/select2.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static',filename='menu/vendor/tilt/tilt.jquery.min.js')}}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static',filename='menu/js/main.js')}}"></script>
+
+</body>
+</html>

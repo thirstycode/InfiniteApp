@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Infinite</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='problemfinder/images/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='problemfinder/vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='problemfinder/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='problemfinder/vendor/animate/animate.css')}}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='problemfinder/vendor/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='problemfinder/vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='problemfinder/css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='problemfinder/css/main.css')}}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+						<span class="login100-form-title">
+							 Logged in as user : <a href="https://www.codechef.com/users/{{username}} " target="_blank">{{username}}</a>
+							 <center><a href="/menus">Menu</a></center>
+							 <center><a href="/logout">Logout</a></center>
+
+						</span>
+						<span class="login100-form-title">
+							 <i class="fa fa-search" aria-hidden="true"></i> Problem Finder 
+						</span>
+				<pr>
+						<i class="fa fa-circle fa-sm" aria-hidden="true"></i>  Find problems according to your rating.<br>
+						<i class="fa fa-circle fa-sm" aria-hidden="true"></i>  Your rating is already entered here automatically.<br>
+						<i class="fa fa-wrench" aria-hidden="true"></i>  You can edit the rating and number of problems according to your needs and practice accordingly.<br><br>
+				<form action="/problemfinderroute" method="get">
+						<div class="wrap-input100 validate-input">
+							<input class="input100" type="text" name="rating" value={{ownrating}} placeholder="Rating">
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-star" aria-hidden="true"></i>
+							</span>
+						</div>
+						<div class="wrap-input100 validate-input">
+							<input class="input100" type="text" name="nproblems" value={{nproblems}} placeholder="No. of Problems">
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-sticky-note" aria-hidden="true"></i>
+							</span>
+						</div>
+						<div class="container-login100-form-btn">
+							<button class="login100-form-btn">
+								Find Problems
+							</button>
+						</div>
+				</form><pr>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="{{url_for('static',filename='problemfinder/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static',filename='problemfinder/vendor/bootstrap/js/popper.js')}}"></script>
+	<script src="{{url_for('static',filename='problemfinder/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static',filename='problemfinder/vendor/select2/select2.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static',filename='problemfinder/vendor/tilt/tilt.jquery.min.js')}}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static',filename='problemfinder/js/main.js')}}"></script>
+</body>
+</html>
